@@ -16,6 +16,14 @@ var counter = {
 }
 
 function countLetters(counter, sample_text){
+
+  if (sample_text.length === 0){
+    return;
+  }
+
+
+
+
   // FIX ME
 }
 
