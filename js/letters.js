@@ -16,15 +16,16 @@ var counter = {
 }
 
 function countLetters(counter, sample_text){
-
-  if (sample_text.length === 0){
-    return;
+debugger;
+  if (!sample_text.length) return counter;
+  if (sample_text[0] === " "){
+    sample_text = sample_text.slice(1);
   }
-
-
-
-
-  // FIX ME
+  var letter = sample_text[0].toLowerCase();
+  if(counter.hasOwnProperty(letter)){
+    counter[letter]++;
+  }
+  return countLetters(counter, sample_text.slice(1));
 }
 
 $(document).ready(function(){
